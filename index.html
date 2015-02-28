@@ -12,8 +12,9 @@
 <body ng-app="myApp">
   <h1>Tasks</h1>
   <div ng-controller="ListController">
+    <input type="text" ng-model="query">
     <ul class="tasks">
-    <li class="task" ng-repeat="task in tasks">
+    <li class="task" ng-repeat="task in tasks | filter: query">
       {{task}}
     </li>
     </ul>
